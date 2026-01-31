@@ -1,6 +1,4 @@
-/*
-Creating Table for job_postings dataset
-*/
+-- Creating Table for job_postings dataset
 
 CREATE TABLE job_postings (
     job_id INT PRIMARY KEY,
@@ -20,3 +18,15 @@ CREATE TABLE job_postings (
     salary_year_avg NUMERIC,
     salary_hour_avg NUMERIC
 );
+
+-- creating table for company_dim dataset
+
+CREATE TABLE public.company_dim
+(
+    company_id INT PRIMARY KEY,
+    name TEXT,
+    link TEXT,
+    link_google TEXT,
+    thumbnail TEXT
+);
+
