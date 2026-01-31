@@ -1,9 +1,9 @@
 /*
-Question: What are the top-paying data analyst jobs?
-- Identify the top 10 highest-paying Data Analyst roles that are available remotely
+Question: What are the top-paying Machine Learning Engineer jobs?
+- Identify the top 10 highest-paying Machine Learning Engineer roles that are available remotely
 - Focuses on job postings with specified salaries (remove nulls)
 - BONUS: Include company names of top 10 roles
-- Why? Highlight the top-paying opportunities for Data Analysts, offering insights into employment options and location flexibility.
+- Why? Highlight the top-paying opportunities for Machine Learning Engineers, offering insights into employment options and location flexibility.
 */
 
 SELECT

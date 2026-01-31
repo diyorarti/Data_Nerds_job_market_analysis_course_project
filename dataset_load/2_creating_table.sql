@@ -1,5 +1,4 @@
 -- Creating Table for job_postings dataset
-
 CREATE TABLE job_postings (
     job_id INT PRIMARY KEY,
     company_id INT,
@@ -20,7 +19,6 @@ CREATE TABLE job_postings (
 );
 
 -- creating table for company_dim dataset
-
 CREATE TABLE public.company_dim
 (
     company_id INT PRIMARY KEY,
@@ -30,3 +28,19 @@ CREATE TABLE public.company_dim
     thumbnail TEXT
 );
 
+-- creating table for skills_dim dataset
+CREATE TABLE public.skills_dim
+(
+    skill_id INT PRIMARY KEY,
+    skills TEXT,
+    type TEXT
+);
+
+-- creating table for skills_job_dim
+CREATE TABLE public.skills_job_dim (
+    job_id INT,
+    skill_id INT,
+    PRIMARY KEY (job_id, skill_id),
+    FOREIGN KEY (job_id) REFERENCES job_postings(job_id),
+    FOREIGN KEY (skill_id) REFERENCES skills_dim(skill_id)
+);
